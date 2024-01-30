@@ -34,6 +34,17 @@ public class Auteur {
     public String getPerfDram(){
         return this.perfDram;
     }
+    public boolean pointFort(){
+        if (this.qualCom > this.qualDram & this.qualCom > this.qualTrag ){
+            return this.qualCom;
+        }
+        else if (this.qualDram > this.Targ){
+            return this.qualDram
+        }
+        else{
+            return this.qualTrag
+        }
+    }
     @Override
     public String toString() {
         return "L'honorable" + this.nomAuteur;

@@ -17,6 +17,10 @@ public class Auteur {
         this.qualDram = qualDram;
 }
     public void getQualiteTrag() {
-        return this.qualTrag
+        return this.qualTrag;
+}
+    @Override
+    public String toString() {
+        return "L'honorable" + this.nomAuteur;
 }
 }

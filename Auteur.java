@@ -15,12 +15,27 @@ public class Auteur {
         this.qualCom = qualCom;
         this.perfDram = perfDram;
         this.qualDram = qualDram;
-}
-    public void getQualiteTrag() {
+    }
+    public int getQualiteTrag() {
         return this.qualTrag;
-}
+    }
+    public String getPerfTrag(){
+        return this.perfTrag;
+    }
+    public int getQualiteCom() {
+        return this.qualCom;
+    }
+    public String getPerfCom(){
+        return this.perfCom;
+    }
+    public int getQualiteDram() {
+        return this.qualDram;
+    }
+    public String getPerfDram(){
+        return this.perfDram;
+    }
     @Override
     public String toString() {
         return "L'honorable" + this.nomAuteur;
-}
+        }
 }

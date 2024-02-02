@@ -6,6 +6,7 @@ public class Auteur {
     private int qualCom;
     private String perfDram;
     private int qualDram;
+    private Style style;
 
     public Auteur(String nomAuteur, String perfTrag, int qualTrag, String perfCom, int qualCom, String perfDram, int qualDram) {
         this.nomAuteur = nomAuteur;
@@ -46,10 +47,10 @@ public class Auteur {
         }
     }
     public int qualitéStyle(Style s){
-        if(s.equals("COMÉDIE")){
+        if(s.equals(Style.COMÉDIE)){
             return this.qualCom;
         }
-        else if(s.equals("TRAGÉDIE")){
+        else if(s.equals(Style.TRAGÉDIE)){
             return this.qualTrag;
         }
         else{

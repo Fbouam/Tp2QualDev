@@ -8,7 +8,7 @@ public class Auteur {
     private int qualDram;
 
     public Auteur(String nomAuteur, String perfTrag, int qualTrag, String perfCom, int qualCom, String perfDram, int qualDram) {
-        this.nom = nomAuteur;
+        this.nomAuteur = nomAuteur;
         this.perfTrag = perfTrag;
         this.qualTrag = qualTrag;
         this.perfCom = perfCom;
@@ -34,17 +34,30 @@ public class Auteur {
     public String getPerfDram(){
         return this.perfDram;
     }
-    public boolean pointFort(){
-        if (this.qualCom > this.qualDram & this.qualCom > this.qualTrag ){
-            return this.qualCom;
+    public String pointFort(){
+        if (this.qualCom > this.qualDram && this.qualCom > this.qualTrag ){
+            return "COMEDIE";
         }
-        else if (this.qualDram > this.Targ){
-            return this.qualDram
+        else if (this.qualDram > this.qualTrag){
+            return "DRAME";
         }
         else{
-            return this.qualTrag
+            return "TRAGEDIE";
         }
     }
+    public int qualitéStyle(Style s){
+        if(s.equals("COMÉDIE")){
+            return this.qualCom;
+        }
+        else if(s.equals("TRAGÉDIE")){
+            return this.qualTrag;
+        }
+        else{
+            return this.qualDram;
+        }
+    }
+    
+
     @Override
     public String toString() {
         return "L'honorable" + this.nomAuteur;

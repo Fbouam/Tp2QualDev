@@ -56,7 +56,7 @@ public class Auteur {
             return this.qualDram;
         }
     }
-    public int citationStyle(Style s){
+    public String citationStyle(Style s){
         if(s.equals("COMÉDIE")){
             return this.perfCom;
         }
